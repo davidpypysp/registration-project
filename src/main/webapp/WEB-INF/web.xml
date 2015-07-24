@@ -1,7 +1,48 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+		 version="3.1">
+  <servlet>
+	<servlet-name>SignUpAction</servlet-name>
+	<servlet-class>com.shiping.webstudy.registration.action.SignUpAction</servlet-class>
+  </servlet>
+  <servlet>
+	<servlet-name>LoginAction</servlet-name>
+	<servlet-class>com.shiping.webstudy.registration.action.LoginAction</servlet-class>
+  </servlet>
+  <servlet>
+	<servlet-name>ForwardUserAction</servlet-name>
+	<servlet-class>com.shiping.webstudy.registration.action.ForwardUserAction</servlet-class>
+  </servlet>
+  <servlet>
+	<servlet-name>LogoutAction</servlet-name>
+	<servlet-class>com.shiping.webstudy.registration.action.LogoutAction</servlet-class>
+  </servlet>
+  <servlet>
+	<servlet-name>UpdateAction</servlet-name>
+	<servlet-class>com.shiping.webstudy.registration.action.UpdateAction</servlet-class>
+  </servlet>
 
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet-mapping>
+	<servlet-name>SignUpAction</servlet-name>
+	<url-pattern>/SignUp.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+	<servlet-name>LoginAction</servlet-name>
+	<url-pattern>/Login.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+	<servlet-name>ForwardUserAction</servlet-name>
+	<url-pattern>/User</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+	<servlet-name>LogoutAction</servlet-name>
+	<url-pattern>/Logout.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+	<servlet-name>UpdateAction</servlet-name>
+	<url-pattern>/Update.do</url-pattern>
+  </servlet-mapping>
 </web-app>
